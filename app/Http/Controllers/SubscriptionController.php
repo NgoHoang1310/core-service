@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Subscription;
-use App\Models\User;
 
 class SubscriptionController extends ApiController
 {

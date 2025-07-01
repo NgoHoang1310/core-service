@@ -61,4 +61,9 @@ class Subscription extends Model
     {
         return $this->belongsTo(Plan::class, 'plan_id');
     }
+
+    public function vouchers()
+    {
+        return $this->belongsToMany(Voucher::class, 'subscription_vouchers')->withTimestamps();
+    }
 }

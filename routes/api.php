@@ -61,3 +61,8 @@ Route::delete('/content/user-content-item', [UserContentItemController::class, '
 Route::get('/watch-history', [WatchHistoryController::class, 'showByUserUuid']);
 Route::post('/watch-history', [WatchHistoryController::class, 'update']);
 
+Route::get('notifications', [\App\Http\Controllers\NotificationController::class, 'index'])
+    ->name('notifications.index');
+
+Route::patch('notifications/{notification}/mark-as-read', [\App\Http\Controllers\NotificationController::class, 'markAsRead']);
+
